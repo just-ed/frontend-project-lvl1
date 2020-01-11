@@ -9,4 +9,4 @@ export const gameQuestion = () => {
 };
 
 export const correctAnswer = (exp) => eval(exp);
-export const isCorrectAnswer = (ans, exp) => Number(ans) === eval(exp);
+export const isCorrectAnswer = (userAns, correctAns) => Number(userAns) === eval(correctAns);

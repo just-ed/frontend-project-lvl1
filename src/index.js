@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import * as brainEven from './games/brain-even';
-import * as brainCalc from './games/brain-calc'
+import * as brainCalc from './games/brain-calc';
+import * as brainGcd from './games/brain-gcd';
 
 console.log("Welcome to the Brain Games!");
 
