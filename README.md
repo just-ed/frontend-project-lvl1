@@ -8,6 +8,7 @@
 ```
 make install
 make publish
+npm link
 ```
 
 ## Games
