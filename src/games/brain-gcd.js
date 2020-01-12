@@ -1,6 +1,6 @@
 export const gameQuestion = () => {
-  const num1 = Math.floor(Math.random()*100);
-  const num2 = Math.floor(Math.random()*100);
+  const num1 = Math.floor(Math.random() * 100);
+  const num2 = Math.floor(Math.random() * 100);
 
   const questionText = `${num1} ${num2}`;
 

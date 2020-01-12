@@ -15,6 +15,7 @@ make publish
 * brain-calc
 * brain-gcd
 * brain-progression
+* brain-prime
 
 ## Run
 ### brain-even
@@ -32,4 +33,8 @@ make publish
 
 ### brain-progression
 
-[![asciicast](https://asciinema.org/a/14.png)]( https://asciinema.org/a/GpJJtBegAi1Ch5plIzxFtxxZi)
+[![asciicast](https://asciinema.org/a/14.png)](https://asciinema.org/a/GpJJtBegAi1Ch5plIzxFtxxZi)
+
+### brain-prime
+
+[![asciicast](https://asciinema.org/a/14.png)](https://asciinema.org/a/0bb2fYd69O0X3JErsCnTNb3Gq)

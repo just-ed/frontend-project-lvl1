@@ -1,8 +1,8 @@
 const progressionSize = 10;
 
 export const gameQuestion = () => {
-  const start = Math.floor(Math.random()*100);
-  const d = Math.ceil(Math.random()*10);
+  const start = Math.floor(Math.random() * 100);
+  const d = Math.ceil(Math.random() * 10);
 
   const arr = [start];
 
