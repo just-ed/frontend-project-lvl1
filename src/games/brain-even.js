@@ -1,4 +1,10 @@
 export const isEven = (num) => num % 2 === 0;
-export const correctAnswer = (num) => isEven(num) ? 'yes' : 'no';
-export const isCorrectAnswer = (ans, num) => ans === correctAnswer(num);
-export const gameQuestion = () => Math.floor(Math.random() * 100);
+
+export const gameQuestion = () => {
+  const questionText = Math.floor(Math.random() * 100);
+  const questionAnswer = isEven(questionText) ? 'yes' : 'no';
+  
+  return { questionText, questionAnswer };
+};
+
+export const isCorrectAnswer = (ans, num) => ans === num;

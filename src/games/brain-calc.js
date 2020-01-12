@@ -5,8 +5,10 @@ export const gameQuestion = () => {
   const num2 = Math.floor(Math.random()*10);
   const operator = operators[Math.floor(Math.random() * operators.length)];
   
-  return `${num1} ${operator} ${num2}`;
+  const questionText = `${num1} ${operator} ${num2}`;
+  const questionAnswer = eval(questionText);
+
+  return { questionText, questionAnswer };
 };
 
-export const correctAnswer = (exp) => eval(exp);
-export const isCorrectAnswer = (userAns, correctAns) => Number(userAns) === eval(correctAns);
+export const isCorrectAnswer = (userAnswer, correctAnswer) => Number(userAnswer) === correctAnswer;

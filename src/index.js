@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import * as brainEven from './games/brain-even';
 import * as brainCalc from './games/brain-calc';
 import * as brainGcd from './games/brain-gcd';
+import * as brainProgression from './games/brain-progression';
 
 console.log("Welcome to the Brain Games!");
 
@@ -13,15 +14,17 @@ const playGame = (gameName) => {
   let currentQuestion = 0;
 
   while (currentQuestion < numOfQuestions) {
-    const question = eval(gameName).gameQuestion();
-    console.log(`Question: ${question}`);
+    const gameQuestion = eval(gameName).gameQuestion();
+    const questionText = gameQuestion.questionText;
+    const correctAnswer = gameQuestion.questionAnswer;
 
-    const answer = readlineSync.question('Your answer: ');
+    console.log(`Question: ${questionText}`);
 
-    if (!eval(gameName).isCorrectAnswer(answer, question)) {
-      return `'${answer}' is wrong answer ;(.` +
-        `Correct answer was '${eval(gameName).correctAnswer(question)}'.` +
-        `\nLet's try again, ${name}!`
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (!eval(gameName).isCorrectAnswer(userAnswer, correctAnswer)) {
+      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\n.` +
+        `Let's try again, ${name}!`
     }
 
     console.log('Correct!');
