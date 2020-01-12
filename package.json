@@ -1,7 +1,7 @@
 {
   "name": "frontend-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Brain games",
   "main": "index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
@@ -22,6 +22,10 @@
     "type": "git",
     "url": "git+https://github.com/just-ed/frontend-project-lvl1.git"
   },
+  "keywords": [
+    "brain",
+    "games"
+  ],
   "author": "Edgar Tomeyan",
   "license": "ISC",
   "bugs": {
