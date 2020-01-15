@@ -8,9 +8,9 @@ export const gameQuestion = () => {
   let b = num2;
 
   while (a !== 0 && b !== 0) {
-    (a > b) ? (a = a % b) : (b = b % a);
+    (a > b) ? (a %= b) : (b %= a);
   }
-  
+
   const questionAnswer = a + b;
 
   return { questionText, questionAnswer };

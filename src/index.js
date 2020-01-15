@@ -5,7 +5,7 @@ import * as brainGcd from './games/brain-gcd';
 import * as brainProgression from './games/brain-progression';
 import * as brainPrime from './games/brain-prime';
 
-console.log("Welcome to the Brain Games!");
+console.log('Welcome to the Brain Games!');
 
 const playGame = (gameName) => {
   const name = readlineSync.question('May I have your name? ');
@@ -24,8 +24,8 @@ const playGame = (gameName) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (!eval(gameName).isCorrectAnswer(userAnswer, correctAnswer)) {
-      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n` +
-        `Let's try again, ${name}!`
+      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`
+       + `Let's try again, ${name}!`;
     }
 
     console.log('Correct!');

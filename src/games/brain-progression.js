@@ -10,7 +10,7 @@ export const gameQuestion = () => {
     arr.push(arr[i - 1] + d);
   }
 
-  const questionAnswer = arr[Math.floor(Math.random()*arr.length)];
+  const questionAnswer = arr[Math.floor(Math.random() * arr.length)];
 
   arr[arr.indexOf(questionAnswer)] = '..';
   const questionText = arr.join(' ');
