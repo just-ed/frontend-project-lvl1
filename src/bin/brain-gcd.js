@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
 import playGame from '..';
+import { gameRules, gameQuestion, isCorrectAnswer } from '../games/brain-gcd';
 
-console.log(playGame('brainGcd'));
+playGame(gameRules, gameQuestion, isCorrectAnswer);

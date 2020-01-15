@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
 import playGame from '..';
+import { gameRules, gameQuestion, isCorrectAnswer } from '../games/brain-progression';
 
-console.log(playGame('brainProgression'));
+playGame(gameRules, gameQuestion, isCorrectAnswer);
