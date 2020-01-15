@@ -19,3 +19,5 @@ export const gameQuestion = () => {
 };
 
 export const isCorrectAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
+
+export const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';

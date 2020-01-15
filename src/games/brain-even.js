@@ -8,3 +8,5 @@ export const gameQuestion = () => {
 };
 
 export const isCorrectAnswer = (ans, num) => ans === num;
+
+export const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".\n';

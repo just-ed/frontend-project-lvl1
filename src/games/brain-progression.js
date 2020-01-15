@@ -19,3 +19,5 @@ export const gameQuestion = () => {
 };
 
 export const isCorrectAnswer = (userAnswer, correctAnswer) => Number(userAnswer) === correctAnswer;
+
+export const gameRules = 'What number is missing in the progression?\n';

@@ -8,6 +8,8 @@ import * as brainPrime from './games/brain-prime';
 console.log('Welcome to the Brain Games!');
 
 const playGame = (gameName) => {
+  console.log(eval(gameName).gameRules);
+
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
 

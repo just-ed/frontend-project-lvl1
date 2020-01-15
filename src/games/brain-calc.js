@@ -12,3 +12,5 @@ export const gameQuestion = () => {
 };
 
 export const isCorrectAnswer = (userAnswer, correctAnswer) => Number(userAnswer) === correctAnswer;
+
+export const gameRules = 'What is the result of the expression?\n';

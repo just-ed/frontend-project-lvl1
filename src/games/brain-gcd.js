@@ -17,3 +17,5 @@ export const gameQuestion = () => {
 };
 
 export const isCorrectAnswer = (userAnswer, correctAnswer) => Number(userAnswer) === correctAnswer;
+
+export const gameRules = 'Find the greatest common divisor of given numbers.\n';
