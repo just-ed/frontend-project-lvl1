@@ -15,7 +15,7 @@ const evalGcd = (num1, num2) => {
   return a + b;
 };
 
-export const gameQuestion = () => {
+export const createQuestion = () => {
   const num1 = rand(100);
   const num2 = rand(100);
 

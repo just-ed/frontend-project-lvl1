@@ -2,7 +2,7 @@ import rand from '../lib/rand';
 
 const isEven = (num) => num % 2 === 0;
 
-export const gameQuestion = () => {
+export const createQuestion = () => {
   const questionText = rand(100);
   const questionAnswer = isEven(questionText) ? 'yes' : 'no';
 

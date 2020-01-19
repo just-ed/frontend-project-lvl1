@@ -22,7 +22,7 @@ const calculate = (num1, num2, operator) => {
   return result;
 };
 
-export const gameQuestion = () => {
+export const createQuestion = () => {
   const num1 = rand(10);
   const num2 = rand(10);
   const operator = operators[rand(operators.length)];

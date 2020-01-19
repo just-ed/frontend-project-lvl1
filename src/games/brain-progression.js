@@ -12,7 +12,7 @@ const makeProgression = (start, d) => {
   return progression;
 };
 
-export const gameQuestion = () => {
+export const createQuestion = () => {
   const start = rand(100);
   const d = rand(10) + 1;
   const arr = makeProgression(start, d);

@@ -4,7 +4,7 @@ console.log('Welcome to the Brain Games!');
 
 const isCorrectAnswer = (userAsnwer, correctAnswer) => userAsnwer === correctAnswer.toString();
 
-const playGame = (gameRules, gameQuestion) => {
+const playGame = (gameRules, createQuestion) => {
   console.log(gameRules);
 
   const name = readlineSync.question('May I have your name? ');
@@ -14,7 +14,7 @@ const playGame = (gameRules, gameQuestion) => {
   let currentQuestion = 0;
 
   while (currentQuestion < numOfQuestions) {
-    const { questionText, questionAnswer } = gameQuestion();
+    const { questionText, questionAnswer } = createQuestion();
 
     console.log(`Question: ${questionText}`);
 

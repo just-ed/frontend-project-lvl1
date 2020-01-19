@@ -11,7 +11,7 @@ const isPrime = (num) => {
   return true;
 };
 
-export const gameQuestion = () => {
+export const createQuestion = () => {
   const num = rand(100);
 
   const questionText = num;
