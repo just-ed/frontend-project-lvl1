@@ -1,3 +1,5 @@
+import rand from '../lib/rand';
+
 const operators = ['+', '-', '*'];
 
 const calculate = (num1, num2, operator) => {
@@ -21,9 +23,9 @@ const calculate = (num1, num2, operator) => {
 };
 
 export const gameQuestion = () => {
-  const num1 = Math.floor(Math.random() * 10);
-  const num2 = Math.floor(Math.random() * 10);
-  const operator = operators[Math.floor(Math.random() * operators.length)];
+  const num1 = rand(10);
+  const num2 = rand(10);
+  const operator = operators[rand(operators.length)];
 
   const questionText = `${num1} ${operator} ${num2}`;
   const questionAnswer = calculate(num1, num2, operator);

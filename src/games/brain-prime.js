@@ -1,3 +1,5 @@
+import rand from '../lib/rand';
+
 const isPrime = (num) => {
   if (num < 2) return false;
   if (num === 2) return true;
@@ -10,7 +12,7 @@ const isPrime = (num) => {
 };
 
 export const gameQuestion = () => {
-  const num = Math.floor(Math.random() * 100);
+  const num = rand(100);
 
   const questionText = num;
   const questionAnswer = isPrime(num) ? 'yes' : 'no';

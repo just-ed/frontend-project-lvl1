@@ -1,3 +1,5 @@
+import rand from '../lib/rand';
+
 const progressionSize = 10;
 
 const makeProgression = (start, d) => {
@@ -11,11 +13,11 @@ const makeProgression = (start, d) => {
 };
 
 export const gameQuestion = () => {
-  const start = Math.floor(Math.random() * 100);
-  const d = Math.ceil(Math.random() * 10);
+  const start = rand(100);
+  const d = rand(10) + 1;
   const arr = makeProgression(start, d);
 
-  const questionAnswer = arr[Math.floor(Math.random() * arr.length)];
+  const questionAnswer = arr[rand(arr.length)];
   arr[arr.indexOf(questionAnswer)] = '..';
   const questionText = arr.join(' ');
 

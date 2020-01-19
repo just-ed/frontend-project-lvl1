@@ -1,3 +1,5 @@
+import rand from '../lib/rand';
+
 const evalGcd = (num1, num2) => {
   let a = num1;
   let b = num2;
@@ -14,8 +16,8 @@ const evalGcd = (num1, num2) => {
 };
 
 export const gameQuestion = () => {
-  const num1 = Math.floor(Math.random() * 100);
-  const num2 = Math.floor(Math.random() * 100);
+  const num1 = rand(100);
+  const num2 = rand(100);
 
   const questionText = `${num1} ${num2}`;
   const questionAnswer = evalGcd(num1, num2);
