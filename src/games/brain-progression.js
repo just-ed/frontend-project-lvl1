@@ -2,11 +2,11 @@ import rand from '../lib/rand';
 
 const progressionSize = 10;
 
-const makeProgression = (start, d) => {
-  const progression = [start];
+const makeProgression = (start, diff) => {
+  const progression = [];
 
-  for (let i = progression.length; i < progressionSize; i += 1) {
-    progression.push(progression[i - 1] + d);
+  for (let i = 0; i < progressionSize; i += 1) {
+    progression.push(start + diff * i);
   }
 
   return progression;
@@ -14,12 +14,12 @@ const makeProgression = (start, d) => {
 
 export const createQuestion = () => {
   const start = rand(100);
-  const d = rand(10) + 1;
-  const arr = makeProgression(start, d);
+  const diff = rand(10) + 1;
+  const progression = makeProgression(start, diff);
 
-  const questionAnswer = arr[rand(arr.length)];
-  arr[arr.indexOf(questionAnswer)] = '..';
-  const questionText = arr.join(' ');
+  const questionAnswer = progression[rand(progression.length)];
+  progression[progression.indexOf(questionAnswer)] = '..';
+  const questionText = progression.join(' ');
 
   return { questionText, questionAnswer };
 };
