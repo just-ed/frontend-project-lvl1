@@ -2,7 +2,9 @@ import readlineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
 
-const playGame = (gameRules, gameQuestion, isCorrectAnswer) => {
+const isCorrectAnswer = (userAsnwer, correctAnswer) => userAsnwer === correctAnswer.toString();
+
+const playGame = (gameRules, gameQuestion) => {
   console.log(gameRules);
 
   const name = readlineSync.question('May I have your name? ');

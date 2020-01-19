@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import playGame from '..';
-import { gameRules, gameQuestion, isCorrectAnswer } from '../games/brain-progression';
+import { gameRules, gameQuestion } from '../games/brain-progression';
 
-playGame(gameRules, gameQuestion, isCorrectAnswer);
+playGame(gameRules, gameQuestion);

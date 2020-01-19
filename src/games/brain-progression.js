@@ -24,6 +24,4 @@ export const gameQuestion = () => {
   return { questionText, questionAnswer };
 };
 
-export const isCorrectAnswer = (userAnswer, correctAnswer) => Number(userAnswer) === correctAnswer;
-
 export const gameRules = 'What number is missing in the progression?\n';
