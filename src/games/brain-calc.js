@@ -1,4 +1,5 @@
 import rand from '../lib/rand';
+import playGame from '..';
 
 const operators = ['+', '-', '*'];
 
@@ -33,4 +34,6 @@ export const createQuestion = () => {
   return { questionText, questionAnswer };
 };
 
-export const gameRules = 'What is the result of the expression?\n';
+export const gameRules = 'What is the result of the expression?';
+
+export const playBrainCalc = () => playGame(gameRules, createQuestion);

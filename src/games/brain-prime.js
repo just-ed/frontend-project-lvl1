@@ -1,4 +1,5 @@
 import rand from '../lib/rand';
+import playGame from '..';
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -20,4 +21,6 @@ export const createQuestion = () => {
   return { questionText, questionAnswer };
 };
 
-export const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+export const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+export const playBrainPrime = () => playGame(gameRules, createQuestion);

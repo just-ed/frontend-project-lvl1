@@ -7,7 +7,7 @@ const numOfQuestions = 3;
 const isCorrectAnswer = (userAsnwer, correctAnswer) => userAsnwer === correctAnswer.toString();
 
 const playGame = (gameRules, createQuestion) => {
-  console.log(gameRules);
+  console.log(`${gameRules}\n`);
 
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);

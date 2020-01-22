@@ -1,4 +1,5 @@
 import rand from '../lib/rand';
+import playGame from '..';
 
 const progressionSize = 10;
 
@@ -24,4 +25,6 @@ export const createQuestion = () => {
   return { questionText, questionAnswer };
 };
 
-export const gameRules = 'What number is missing in the progression?\n';
+export const gameRules = 'What number is missing in the progression?';
+
+export const playBrainProgression = () => playGame(gameRules, createQuestion);

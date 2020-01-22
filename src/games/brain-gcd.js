@@ -1,4 +1,5 @@
 import rand from '../lib/rand';
+import playGame from '..';
 
 const evalGcd = (num1, num2) => {
   let a = num1;
@@ -25,4 +26,6 @@ export const createQuestion = () => {
   return { questionText, questionAnswer };
 };
 
-export const gameRules = 'Find the greatest common divisor of given numbers.\n';
+export const gameRules = 'Find the greatest common divisor of given numbers.';
+
+export const playBrainGcd = () => playGame(gameRules, createQuestion);
