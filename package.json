@@ -2,7 +2,6 @@
   "name": "frontend-project",
   "version": "1.0.0",
   "description": "Brain games",
-  "main": "index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
@@ -44,7 +43,6 @@
     "eslint-plugin-import": "^2.20.0"
   },
   "dependencies": {
-    "@types/readline-sync": "^1.4.3",
     "readline-sync": "^1.4.10"
   }
 }
