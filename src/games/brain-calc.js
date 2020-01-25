@@ -23,17 +23,17 @@ const calculate = (num1, num2, operator) => {
   return result;
 };
 
-export const createQuestion = () => {
-  const num1 = rand(10);
-  const num2 = rand(10);
-  const operator = operators[rand(operators.length)];
+const createQuestionAndAnswer = () => {
+  const num1 = rand(0, 10);
+  const num2 = rand(0, 10);
+  const operator = operators[rand(0, operators.length)];
 
-  const questionText = `${num1} ${operator} ${num2}`;
-  const questionAnswer = calculate(num1, num2, operator);
+  const question = `${num1} ${operator} ${num2}`;
+  const answer = calculate(num1, num2, operator).toString();
 
-  return { questionText, questionAnswer };
+  return { question, answer };
 };
 
-export const gameRules = 'What is the result of the expression?';
+const gameTask = 'What is the result of the expression?';
 
-export const playBrainCalc = () => playGame(gameRules, createQuestion);
+export default () => playGame(gameTask, createQuestionAndAnswer);

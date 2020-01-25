@@ -12,15 +12,13 @@ const isPrime = (num) => {
   return true;
 };
 
-export const createQuestion = () => {
-  const num = rand(100);
+const createQuestionAndAnswer = () => {
+  const question = rand(0, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
 
-  const questionText = num;
-  const questionAnswer = isPrime(num) ? 'yes' : 'no';
-
-  return { questionText, questionAnswer };
+  return { question, answer };
 };
 
-export const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const playBrainPrime = () => playGame(gameRules, createQuestion);
+export default () => playGame(gameTask, createQuestionAndAnswer);

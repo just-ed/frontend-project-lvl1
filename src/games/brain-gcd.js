@@ -16,16 +16,16 @@ const evalGcd = (num1, num2) => {
   return a + b;
 };
 
-export const createQuestion = () => {
-  const num1 = rand(100);
-  const num2 = rand(100);
+const createQuestionAndAnswer = () => {
+  const num1 = rand(0, 100);
+  const num2 = rand(0, 100);
 
-  const questionText = `${num1} ${num2}`;
-  const questionAnswer = evalGcd(num1, num2);
+  const question = `${num1} ${num2}`;
+  const answer = evalGcd(num1, num2).toString();
 
-  return { questionText, questionAnswer };
+  return { question, answer };
 };
 
-export const gameRules = 'Find the greatest common divisor of given numbers.';
+const gameTask = 'Find the greatest common divisor of given numbers.';
 
-export const playBrainGcd = () => playGame(gameRules, createQuestion);
+export default () => playGame(gameTask, createQuestionAndAnswer);

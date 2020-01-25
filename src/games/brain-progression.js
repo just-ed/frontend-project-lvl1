@@ -13,18 +13,20 @@ const makeProgression = (start, diff) => {
   return progression;
 };
 
-export const createQuestion = () => {
-  const start = rand(100);
-  const diff = rand(10) + 1;
+const createQuestionAndAnswer = () => {
+  const start = rand(0, 100);
+  const diff = rand(1, 10);
   const progression = makeProgression(start, diff);
 
-  const questionAnswer = progression[rand(progression.length)];
-  progression[progression.indexOf(questionAnswer)] = '..';
-  const questionText = progression.join(' ');
+  let answer = progression[rand(0, progression.length)];
+  progression[progression.indexOf(answer)] = '..';
 
-  return { questionText, questionAnswer };
+  const question = progression.join(' ');
+  answer = answer.toString();
+
+  return { question, answer };
 };
 
-export const gameRules = 'What number is missing in the progression?';
+const gameTask = 'What number is missing in the progression?';
 
-export const playBrainProgression = () => playGame(gameRules, createQuestion);
+export default () => playGame(gameTask, createQuestionAndAnswer);
