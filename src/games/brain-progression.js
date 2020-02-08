@@ -18,7 +18,7 @@ const createQuestionAndAnswer = () => {
   const diff = rand(1, 10);
   const progression = makeProgression(start, diff);
 
-  const answer = progression[rand(0, progression.length)];
+  const answer = progression[rand(0, progression.length - 1)];
   progression[progression.indexOf(answer)] = '..';
 
   const question = progression.join(' ');

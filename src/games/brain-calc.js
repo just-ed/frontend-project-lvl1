@@ -17,7 +17,7 @@ const calculate = (num1, num2, operator) => {
       result = num1 * num2;
       break;
     default:
-      result = null;
+      return null;
   }
 
   return result;
@@ -26,7 +26,7 @@ const calculate = (num1, num2, operator) => {
 const createQuestionAndAnswer = () => {
   const num1 = rand(0, 10);
   const num2 = rand(0, 10);
-  const operator = operators[rand(0, operators.length)];
+  const operator = operators[rand(0, operators.length - 1)];
 
   const question = `${num1} ${operator} ${num2}`;
   const answer = calculate(num1, num2, operator).toString();
