@@ -18,13 +18,12 @@ const createQuestionAndAnswer = () => {
   const diff = rand(1, 10);
   const progression = makeProgression(start, diff);
 
-  let answer = progression[rand(0, progression.length)];
+  const answer = progression[rand(0, progression.length)];
   progression[progression.indexOf(answer)] = '..';
 
   const question = progression.join(' ');
-  answer = answer.toString();
 
-  return { question, answer };
+  return { question, answer: answer.toString() };
 };
 
 const gameTask = 'What number is missing in the progression?';
